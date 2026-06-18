@@ -1,0 +1,124 @@
+/* Reset & Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Card Container */
+.container {
+    width: 100%;
+    max-width: 650px;
+    border: 1px solid #e0e0e0;
+    border-radius: 24px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #8c8c8c;
+    font-size: 1rem;
+}
+
+/* Timeline Wrapper */
+.timeline {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Trik membuat garis lurus vertikal tepat di tengah */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 35%; /* Menyelaraskan garis dengan titik bulatan */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #1a1a1a;
+    transform: translateX(-50%);
+}
+
+/* Row Item */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Sisi Kiri (Tanggal) */
+.timeline-date {
+    width: 35%;
+    text-align: right;
+    padding-right: 30px;
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Bulatan Tengah */
+.timeline-point {
+    width: 14px;
+    height: 14px;
+    background-color: #1a1a1a;
+    border-radius: 50%;
+    position: absolute;
+    left: 35%;
+    transform: translateX(-50%);
+    z-index: 1; /* Supaya bulatan berada di atas garis */
+}
+
+/* Sisi Kanan (Konten teks) */
+.timeline-content {
+    width: 65%;
+    padding-left: 30px;
+    color: #1a1a1a;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+/* Button di bagian bawah */
+.footer-action {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #333333;
+}
